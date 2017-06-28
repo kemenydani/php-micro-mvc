@@ -13,8 +13,11 @@ class ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5
     public static $classMap = array (
         'Controllers\\Article' => __DIR__ . '/../..' . '/Controllers/Article.php',
         'Controllers\\Home' => __DIR__ . '/../..' . '/Controllers/Home.php',
+        'Core\\ControllerFactory' => __DIR__ . '/../..' . '/Core/ControllerFactory.php',
         'Core\\DB' => __DIR__ . '/../..' . '/Core/DB.php',
+        'Core\\Request' => __DIR__ . '/../..' . '/Core/Request.php',
         'Core\\Router' => __DIR__ . '/../..' . '/Core/Router.php',
+        'Core\\System' => __DIR__ . '/../..' . '/Core/System.php',
         'Core\\View' => __DIR__ . '/../..' . '/Core/View.php',
         'Models\\Article' => __DIR__ . '/../..' . '/Models/Article.php',
         'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
