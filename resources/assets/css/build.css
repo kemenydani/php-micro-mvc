@@ -1,0 +1,298 @@
+@import url(font-awesome/css/font-awesome.css);
+html, body {
+  min-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px; }
+
+* {
+  box-sizing: border-box; }
+
+h1 {
+  font-size: 4rem; }
+
+h2 {
+  font-size: 3rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1rem; }
+
+/*
+* SOURCE:
+* http://engageinteractive.co.uk/blog/top-10-scss-mixins
+*/
+/*
+* When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+*/
+/*
+* We use this for creating scalable elements (usually images / background images) that maintain a ratio.
+*/
+/*
+* They're a pain as you have to set the style in all the separate formats, this sorts it for you.
+* Just in case there are people how aren't used to using @content here is a usage example:
+*
+* input, textarea {
+*   @include input-placeholder {
+*       color: $grey;
+*   }
+* }
+*/
+/*
+* A massive time saver! You can just use pixel values but we have some default breakpoints setup that work too,
+* another time saver while keeping your breakpoints consistent.
+* The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+* .site-header {
+*   padding: 2rem;
+*   font-size: 1.8rem;
+*   @include mq('tablet-wide') {
+*       padding-top: 4rem;
+*       font-size: 2.4rem;
+*   }
+* }
+*/
+/*
+* Adding Truncation to an element isn't as simple as it should be,
+* although it is with this handy time saver,
+* meaning when you include the mixin,
+* you only have to specify your boundry with a max width value
+*/
+/*
+* Contain floats / clearfix
+*/
+/*
+* Hide from both screenreaders and browsers
+*/
+/*
+* Hide from both screenreaders and browsers
+*/
+/*
+* Unselectable
+*/
+/*
+* Antialias text
+*/
+/*
+* SOURCE:
+* http://engageinteractive.co.uk/blog/top-10-scss-mixins
+*/
+/*
+* When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+*/
+/*
+* We use this for creating scalable elements (usually images / background images) that maintain a ratio.
+*/
+/*
+* They're a pain as you have to set the style in all the separate formats, this sorts it for you.
+* Just in case there are people how aren't used to using @content here is a usage example:
+*
+* input, textarea {
+*   @include input-placeholder {
+*       color: $grey;
+*   }
+* }
+*/
+/*
+* A massive time saver! You can just use pixel values but we have some default breakpoints setup that work too,
+* another time saver while keeping your breakpoints consistent.
+* The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+* .site-header {
+*   padding: 2rem;
+*   font-size: 1.8rem;
+*   @include mq('tablet-wide') {
+*       padding-top: 4rem;
+*       font-size: 2.4rem;
+*   }
+* }
+*/
+/*
+* Adding Truncation to an element isn't as simple as it should be,
+* although it is with this handy time saver,
+* meaning when you include the mixin,
+* you only have to specify your boundry with a max width value
+*/
+/*
+* Contain floats / clearfix
+*/
+/*
+* Hide from both screenreaders and browsers
+*/
+/*
+* Hide from both screenreaders and browsers
+*/
+/*
+* Unselectable
+*/
+/*
+* Antialias text
+*/
+@font-face {
+  font-family: "roboto-light";
+  src: url("../fonts/Roboto/Roboto-Light.eot");
+  src: url("../fonts/Roboto/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype"), url("../fonts/Roboto/Roboto-Light.svg#roboto-light") format("svg"); }
+@font-face {
+  font-family: "josefin-light";
+  src: url("../fonts/Josefin_Sans/JosefinSans-Light.eot");
+  src: url("../fonts/Josefin_Sans/JosefinSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Josefin_Sans/JosefinSans-Light.woff") format("woff"), url("../fonts/Josefin_Sans/JosefinSans-Light.ttf") format("truetype"), url("../fonts/Josefin_Sans/JosefinSans-Light.svg#josefin-light") format("svg"); }
+@font-face {
+  font-family: "lato-light";
+  src: url("../fonts/Lato/Lato-Light.eot");
+  src: url("../fonts/Lato/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato/Lato-Light.woff") format("woff"), url("../fonts/Lato/Lato-Light.ttf") format("truetype"), url("../fonts/Lato/Lato-Light.svg#lato-light") format("svg"); }
+/* Coolors Exported Palette - coolors.co/2d3142-4f5d75-bfc0c0-ffffff-ef8354 */
+/* HSL */
+/*
+$color1: hsla(229%, 19%, 22%, 1);
+$color2: hsla(218%, 19%, 38%, 1);
+$color3: hsla(180%, 1%, 75%, 1);
+$color4: hsla(0%, 0%, 100%, 1);
+$color5: hsla(18%, 83%, 63%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(5, 102, 141, 1);
+$color2: rgba(66, 122, 161, 1);
+$color3: rgba(235, 242, 250, 1);
+$color4: rgba(103, 148, 54, 1);
+$color5: rgba(165, 190, 0, 1);
+*/
+section#header {
+  height: 700px;
+  min-height: 700px;
+  background-color: #2d3142; }
+  section#header nav#navigation {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    overflow: hidden; }
+
+/* Coolors Exported Palette - coolors.co/2d3142-4f5d75-bfc0c0-ffffff-ef8354 */
+/* HSL */
+/*
+$color1: hsla(229%, 19%, 22%, 1);
+$color2: hsla(218%, 19%, 38%, 1);
+$color3: hsla(180%, 1%, 75%, 1);
+$color4: hsla(0%, 0%, 100%, 1);
+$color5: hsla(18%, 83%, 63%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(5, 102, 141, 1);
+$color2: rgba(66, 122, 161, 1);
+$color3: rgba(235, 242, 250, 1);
+$color4: rgba(103, 148, 54, 1);
+$color5: rgba(165, 190, 0, 1);
+*/
+section#about {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  color: #2d3142;
+  text-align: center;
+  font-family: 'roboto-light', sans-serif;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative; }
+  section#about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  section#about .profession {
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 1.9rem;
+    background: #2d3142;
+    padding: 4px 10px 4px 10px;
+    color: white; }
+  section#about h1 {
+    text-transform: uppercase;
+    margin: 0px;
+    padding-bottom: 15px; }
+  section#about .quote {
+    font-family: 'lato-light', sans-serif;
+    font-style: italic;
+    display: block;
+    width: 50%;
+    padding: 0px 0px 30px 0px;
+    color: #ef8354; }
+  section#about p {
+    margin-top: 30px;
+    line-height: 1.9rem;
+    color: #2d3142; }
+  section#about .social-media {
+    display: flex; }
+    section#about .social-media i {
+      color: white;
+      width: 50px;
+      height: 50px;
+      background: #2d3142;
+      line-height: 50px;
+      border-radius: 100%;
+      margin: 0px 10px 0px 10px; }
+
+/* Coolors Exported Palette - coolors.co/2d3142-4f5d75-bfc0c0-ffffff-ef8354 */
+/* HSL */
+/*
+$color1: hsla(229%, 19%, 22%, 1);
+$color2: hsla(218%, 19%, 38%, 1);
+$color3: hsla(180%, 1%, 75%, 1);
+$color4: hsla(0%, 0%, 100%, 1);
+$color5: hsla(18%, 83%, 63%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(5, 102, 141, 1);
+$color2: rgba(66, 122, 161, 1);
+$color3: rgba(235, 242, 250, 1);
+$color4: rgba(103, 148, 54, 1);
+$color5: rgba(165, 190, 0, 1);
+*/
+section#references {
+  background-color: #2d3142;
+  display: flex;
+  justify-content: center;
+  height: 600px; }
+
+/* Coolors Exported Palette - coolors.co/2d3142-4f5d75-bfc0c0-ffffff-ef8354 */
+/* HSL */
+/*
+$color1: hsla(229%, 19%, 22%, 1);
+$color2: hsla(218%, 19%, 38%, 1);
+$color3: hsla(180%, 1%, 75%, 1);
+$color4: hsla(0%, 0%, 100%, 1);
+$color5: hsla(18%, 83%, 63%, 1);
+*/
+/* RGB */
+/*
+$color1: rgba(5, 102, 141, 1);
+$color2: rgba(66, 122, 161, 1);
+$color3: rgba(235, 242, 250, 1);
+$color4: rgba(103, 148, 54, 1);
+$color5: rgba(165, 190, 0, 1);
+*/
+section#footer {
+  height: 500px;
+  max-height: 500px;
+  background-color: #2d3142; }
+
+main#wrapper {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  position: relative;
+  flex-flow: column; }
+
+section#content {
+  flex: 1; }
+
+.container {
+  width: 1100px; }
+  @media only screen and (max-width: 1023px) {
+    .container {
+      width: 100vw; } }
+
+/*# sourceMappingURL=build.css.map */

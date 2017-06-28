@@ -1,0 +1,67 @@
+@import '../colors';
+
+section#about {
+  	background-color: $color4;
+  	display: flex;
+  	justify-content: center;
+  	color: $color1;
+  	text-align: center;
+  	font-family: 'roboto-light', sans-serif;
+  	padding-top: 30px;
+  	padding-bottom: 30px;
+  	position: relative;
+  
+  
+  	.container {
+		display: flex;
+		flex-direction: column;
+	  	align-items: center;
+	}
+  
+  	.profession {
+	  	text-transform: uppercase;
+	  	margin: 0px;
+	  	//color: $color5;
+	  	//padding-bottom: 30px;
+	  	font-size: 1.9rem;
+	  	background: $color1;
+	  	padding: 4px 10px 4px 10px;
+	  	color: $color4;
+	}
+  
+  	h1 {
+	  	text-transform: uppercase;
+	  	margin: 0px;
+	  	padding-bottom: 15px;
+	}
+ 
+  	.quote {
+	  	font-family: 'lato-light', sans-serif;
+	  	font-style: italic;
+	  	display: block;
+	  	width: 50%;
+	  	padding: 0px 0px 30px 0px;
+	  	color: $color5;
+	}
+  	
+  	p {
+	  margin-top: 30px;
+	  line-height: 1.9rem;
+	  color: $color1;
+	}
+ 
+  	.social-media {
+	  	display: flex;
+	  	
+	  	i {
+		  	color: $color4;
+		  	width: 50px;
+		  	height: 50px;
+		  	background: $color1;
+		  	line-height: 50px;
+		  	border-radius: 100%;
+		  	margin: 0px 10px 0px 10px;
+		}
+	}
+ 
+}

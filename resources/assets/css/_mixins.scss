@@ -1,0 +1,164 @@
+/*
+* SOURCE:
+* http://engageinteractive.co.uk/blog/top-10-scss-mixins
+*/
+
+/*
+* When using ::before and ::after you'll always need these three, so we're saving two lines of code every time you use this.
+*/
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+	content: $content;
+	display: $display;
+	position: $pos;
+}
+
+/*
+* We use this for creating scalable elements (usually images / background images) that maintain a ratio.
+*/
+@mixin aspect-ratio($x,$y, $pseudo: false) {
+	$padding: unquote( ( $y / $x ) * 100 + '%' );
+	@if $pseudo {
+		&:before {
+		  @include pseudo($pos: relative);
+		  width: 100%;
+		  padding-top: $padding;
+		}
+	} @else {
+	  	padding-top: $padding;
+	}
+}
+
+/*
+* They're a pain as you have to set the style in all the separate formats, this sorts it for you.
+* Just in case there are people how aren't used to using @content here is a usage example:
+*
+* input, textarea {
+*   @include input-placeholder {
+*       color: $grey;
+*   }
+* }
+*/
+@mixin input-placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+/*
+* A massive time saver! You can just use pixel values but we have some default breakpoints setup that work too,
+* another time saver while keeping your breakpoints consistent.
+* The example below showing the padding and font-size increasing once the viewport gets over 1024px.
+* .site-header {
+*   padding: 2rem;
+*   font-size: 1.8rem;
+*   @include mq('tablet-wide') {
+*       padding-top: 4rem;
+*       font-size: 2.4rem;
+*   }
+* }
+*/
+$breakpoints: (
+	"phone":        400px,
+	"phone-wide":   480px,
+	"phablet":      560px,
+	"tablet-small": 640px,
+	"tablet":       768px,
+	"tablet-wide":  1024px,
+	"desktop":      1248px,
+	"desktop-wide": 1440px
+);
+@mixin device($width, $type: min) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+		  	$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+		  	@content;
+		}
+	}
+}
+
+/*
+* Adding Truncation to an element isn't as simple as it should be,
+* although it is with this handy time saver,
+* meaning when you include the mixin,
+* you only have to specify your boundry with a max width value
+*/
+@mixin truncate($truncation-boundary) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/*
+* Contain floats / clearfix
+*/
+@mixin clear {
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+/*
+* Hide from both screenreaders and browsers
+*/
+@mixin hidden {
+	display: none;
+	visibility: hidden;
+}
+
+/*
+* Hide from both screenreaders and browsers
+*/
+@mixin visible($state: 'block') {
+	display: unquote($state);
+	visibility: visible;
+}
+
+/*
+* Unselectable
+*/
+@mixin unselectable {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/*
+* Antialias text
+*/
+@mixin antialias {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-face($style-name, $file, $family, $category:"") {
+  $filepath: "../fonts/" + $family + "/" + $file;
+  @font-face {
+	font-family: "#{$style-name}";
+	
+	src: url($filepath + ".eot");
+	src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+		 url($filepath + ".woff") format('woff'),
+	 	 url($filepath + ".ttf")  format('truetype'),
+		 url($filepath + ".svg#" + $style-name + "") format('svg');
+
+  }
+  %#{$style-name} {
+	font: {
+	  @if $category != "" {
+		family: "#{$style-name}", #{$category};
+	  }
+	  @else {
+		family: "#{$style-name}";
+		weight: normal;
+	  }
+	}
+  }
+}
