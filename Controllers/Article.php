@@ -1,6 +1,10 @@
 <?php
 
 namespace Controllers;
+
+use Core\View;
+use Core\Request;
+
 /**
  * Created by PhpStorm.
  * User: Dani
@@ -12,10 +16,12 @@ class Article {
 
 	public static function index(){
 		
+		var_dump(Request::get('page'));
+		
 		$model = new \Models\Article();
 		$articles = $model::fetch();
 		
-		\Core\View::getInstance()->assign('articles', $articles)
+		View::getInstance()->assign('articles', $articles)
 							->display('article.list.tpl');
 	}
 	
