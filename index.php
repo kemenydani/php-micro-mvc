@@ -9,4 +9,4 @@ spl_autoload_register(function($name) {
 });
 */
 
-Core\Router::init($_GET);
+Core\Router::getInstance()->load(Core\Request::getInstance());
