@@ -18,6 +18,7 @@
     ]
   },
   "require": {
-    "smarty/smarty": "3.1.x-dev"
+    "smarty/smarty": "3.1.x-dev",
+    "phpmailer/phpmailer": "6.0.x-dev"
   }
 }

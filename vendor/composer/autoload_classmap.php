@@ -12,7 +12,6 @@ return array(
     'Core\\DB' => $baseDir . '/Core/DB.php',
     'Core\\Request' => $baseDir . '/Core/Request.php',
     'Core\\Router' => $baseDir . '/Core/Router.php',
-    'Core\\System' => $baseDir . '/Core/System.php',
     'Core\\View' => $baseDir . '/Core/View.php',
     'Models\\Article' => $baseDir . '/Models/Article.php',
     'Smarty' => $vendorDir . '/smarty/smarty/libs/Smarty.class.php',

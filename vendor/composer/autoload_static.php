@@ -10,6 +10,20 @@ class ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5
         'f084d01b0a599f67676cffef638aa95b' => __DIR__ . '/..' . '/smarty/smarty/libs/bootstrap.php',
     );
 
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
+    );
+
     public static $classMap = array (
         'Controllers\\Article' => __DIR__ . '/../..' . '/Controllers/Article.php',
         'Controllers\\Home' => __DIR__ . '/../..' . '/Controllers/Home.php',
@@ -17,7 +31,6 @@ class ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5
         'Core\\DB' => __DIR__ . '/../..' . '/Core/DB.php',
         'Core\\Request' => __DIR__ . '/../..' . '/Core/Request.php',
         'Core\\Router' => __DIR__ . '/../..' . '/Core/Router.php',
-        'Core\\System' => __DIR__ . '/../..' . '/Core/System.php',
         'Core\\View' => __DIR__ . '/../..' . '/Core/View.php',
         'Models\\Article' => __DIR__ . '/../..' . '/Models/Article.php',
         'Smarty' => __DIR__ . '/..' . '/smarty/smarty/libs/Smarty.class.php',
@@ -196,6 +209,8 @@ class ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit8c0c27e81a50b721895bc7f7340daaa5::$classMap;
 
         }, null, ClassLoader::class);
