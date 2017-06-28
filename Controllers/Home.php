@@ -1,12 +1,9 @@
 <?php
 
 namespace Controllers;
-/**
- * Created by PhpStorm.
- * User: Dani
- * Date: 2017. 06. 27.
- * Time: 14:35
- */
+
+use Core\View;
+
 class Home
 {
 	public function __construct()
@@ -14,6 +11,6 @@ class Home
 	
 	}
 	public static function index(){
-		\Core\View::getInstance()->display('home.tpl');
+		View::getInstance()->display('home.tpl');
 	}
 }
